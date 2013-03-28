@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'polish_chars/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "polish_chars"
-  gem.version       = PolishChars::VERSION
+  gem.version       = "0.0.1"
   gem.authors       = ["snukky"]
   gem.email         = ["snk987@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Extends standard String class by methods handling 
+                         diacritical signs for Polish language.}
+  gem.summary       = %q{Extends String class by handling Polish characters.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

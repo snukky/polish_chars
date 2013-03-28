@@ -1,5 +1,1 @@
-require "polish_chars/version"
-
-module PolishChars
-  # Your code goes here...
-end
+require "polish_chars/core_ext/string"
