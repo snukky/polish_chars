@@ -66,6 +66,20 @@ class ::String
     replace upcase
   end
 
+  alias :capitalize_ascii :capitalize
+
+  def capitalize
+    str = self.downcase
+    str[0] = str[0].upcase if str.size > 0
+    str
+  end
+
+  alias :capitalize_ascii! :capitalize!
+
+  def capitalize!
+    replace capitalize
+  end
+
   def no_pl
     self.gsub(PL_REGEXP, PL_TO_ASCII)
   end
