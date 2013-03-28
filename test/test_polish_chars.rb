@@ -1,6 +1,8 @@
 # encoding: utf-8
 
-require File.expand_path(File.dirname(__FILE__)) + "/../lib/polish_chars"
+$:.unshift File.join(File.dirname(__FILE__), "../lib")
+
+require "../lib/polish_chars"
 require "test/unit"
 
 class TestPolishChars < Test::Unit::TestCase
