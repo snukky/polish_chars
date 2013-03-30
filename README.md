@@ -1,7 +1,7 @@
 # PolishChars
 
-This gem extends `String` class methods, such as `#downcase` and `#upcase` by
-handling diacritical signs from Polish langauge.
+This gem extends the Ruby `String` class methods, such as `#downcase` and `#upcase` by
+handling Polish diacritics. It also adds `#no_pl` method.
 
 ## Installation
 
@@ -21,4 +21,6 @@ Or install it yourself as:
 
   require "polish\_chars"
 
-  "zażółć gęślą jaźń".upcase
+  text = "Zażółć Gęślą Jaźń"
+  text.downcase   # => "zażółć gęślą jaźń"
+  text.upcase     # => "ZAŻÓŁĆ GĘŚLĄ JAŹŃ"
