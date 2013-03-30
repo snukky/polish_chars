@@ -19,6 +19,8 @@ Or install it yourself as:
 
 ## Usage
 
+Example:
+
   require "polish\_chars"
 
   text = "Zażółć Gęślą Jaźń"
