@@ -2,8 +2,8 @@
 
 $:.unshift File.join(File.dirname(__FILE__), "../lib")
 
-require "./polskie_stringi"
-require "../lib/polish_chars"
+require_relative "polskie_stringi"
+require "polish_chars"
 
 require "benchmark"
 

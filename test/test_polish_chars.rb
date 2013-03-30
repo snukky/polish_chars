@@ -2,7 +2,7 @@
 
 $:.unshift File.join(File.dirname(__FILE__), "../lib")
 
-require "../lib/polish_chars"
+require "polish_chars"
 require "test/unit"
 
 class TestPolishChars < Test::Unit::TestCase

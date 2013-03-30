@@ -1,6 +1,6 @@
 # PolishChars
 
-This gem extends the Ruby `String` class methods, such as `#downcase` and `#upcase` by
+Gem extends the Ruby `String` class methods, such as `#downcase` and `#upcase` by
 handling Polish diacritics. It also adds `#no_pl` method.
 
 ## Installation
