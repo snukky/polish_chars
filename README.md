@@ -21,8 +21,8 @@ Or install it yourself as:
 
 Example:
 
-  require "polish\_chars"
+    require "polish\_chars"
 
-  text = "Zażółć Gęślą Jaźń"
-  text.downcase   # => "zażółć gęślą jaźń"
-  text.upcase     # => "ZAŻÓŁĆ GĘŚLĄ JAŹŃ"
+    text = "Zażółć Gęślą Jaźń"
+    text.downcase   # => "zażółć gęślą jaźń"
+    text.upcase     # => "ZAŻÓŁĆ GĘŚLĄ JAŹŃ"
