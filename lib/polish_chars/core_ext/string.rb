@@ -1,7 +1,6 @@
 # encoding: utf-8
 
 class ::String
-
   BIG_TO_SMALL_PL = {
    'Ą' => 'ą',
    'Ć' => 'ć',
@@ -16,28 +15,22 @@ class ::String
 
   SMALL_TO_BIG_PL = BIG_TO_SMALL_PL.invert
 
-  BIG_PL_REGEXP = Regexp.new("([#{BIG_TO_SMALL_PL.keys.join}])")
-  SMALL_PL_REGEXP = Regexp.new("([#{SMALL_TO_BIG_PL.keys.join}])")
+  BIG_CHARS_REGEXP = Regexp.new("[A-Z#{BIG_TO_SMALL_PL.keys.join}]")
+  SMALL_CHARS_REGEXP = Regexp.new("[a-z#{SMALL_TO_BIG_PL.keys.join}]")
+
+  BIG_PL_REGEXP = Regexp.new("[#{BIG_TO_SMALL_PL.keys.join}]")
+  SMALL_PL_REGEXP = Regexp.new("[#{SMALL_TO_BIG_PL.keys.join}]")
 
   PL_TO_ASCII = {
-    'ą' => 'a',
-    'Ą' => 'A',
-    'ć' => 'c',
-    'Ć' => 'C',
-    'ę' => 'e',
-    'Ę' => 'E',
-    'ł' => 'l',
-    'Ł' => 'L',
-    'ń' => 'n',
-    'Ń' => 'N',
-    'ó' => 'o',
-    'Ó' => 'O',
-    'ś' => 's',
-    'Ś' => 'S',
-    'ź' => 'z',
-    'Ż' => 'Z',
-    'ż' => 'z',
-    'Ź' => 'Z'
+    'ą' => 'a', 'Ą' => 'A',
+    'ć' => 'c', 'Ć' => 'C',
+    'ę' => 'e', 'Ę' => 'E',
+    'ł' => 'l', 'Ł' => 'L',
+    'ń' => 'n', 'Ń' => 'N',
+    'ó' => 'o', 'Ó' => 'O',
+    'ś' => 's', 'Ś' => 'S',
+    'ź' => 'z', 'Ż' => 'Z',
+    'ż' => 'z', 'Ź' => 'Z'
   }
 
   PL_REGEXP = Regexp.new("([#{PL_TO_ASCII.keys.join}])")
@@ -87,5 +80,4 @@ class ::String
   def no_pl!
     replace no_pl
   end
-
 end
